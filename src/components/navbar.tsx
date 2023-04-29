@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { auth } from "../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
+import "./navbar.css";
 
 export const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -11,17 +12,23 @@ export const Navbar = () => {
   };
 
   return (
-    <div>
-      <div>
-        <Link to={"/"}>Home</Link>
+    <div className="navbar">
+      <div className="nav-links">
+        <Link to={"/"}>
+          <div>Home</div>
+        </Link>
         {!user ? (
-          <Link to={"/Login"}>Log In</Link>
+          <Link to={"/Login"}>
+            <div>Log In</div>
+          </Link>
         ) : (
-          <Link to={"/createpost"}>Create post</Link>
+          <Link to={"/createpost"}>
+            <div>Create post</div>
+          </Link>
         )}
       </div>
       {user && (
-        <div>
+        <div className="user-pic">
           <p>{user?.displayName}</p>
           <img
             src={user?.photoURL || ""}

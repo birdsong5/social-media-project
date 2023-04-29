@@ -1,0 +1,38 @@
+.navbar {
+  background-color: pink;
+  padding: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links div {
+  align-items: end;
+  margin: 10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.user-pic {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-pic p,
+img,
+button {
+  margin: 10px;
+}
+
+.user-pic p {
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 60%;
+}
