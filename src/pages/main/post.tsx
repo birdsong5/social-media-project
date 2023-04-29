@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../config/firebase";
 import { Post as IPost } from "./main";
+import "./post.css";
 
 interface Props {
   post: IPost;
@@ -96,10 +97,12 @@ export const Post = (props: Props) => {
       <div>
         <p>@ {post.userName}</p>
       </div>
-      <button onClick={userLiked ? removeLike : addLike}>
-        {userLiked ? <>&#128078;</> : <>&#128077;</>}
-      </button>
-      {likes && <p>Likes: {likes?.length}</p>}
+      <div className="likes">
+        <button onClick={userLiked ? removeLike : addLike} className="like">
+          {userLiked ? <>&#x1F497;</> : <>&#x1F90D;</>}
+        </button>{" "}
+        <p>{likes && <p>Likes: {likes?.length}</p>}</p>
+      </div>
     </div>
   );
 };

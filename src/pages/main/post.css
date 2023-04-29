@@ -1,0 +1,15 @@
+button.like {
+  font-size: 25px;
+  background-color: white;
+  border: none;
+  margin: 5px;
+}
+
+button.like:hover {
+  font-size: 28px;
+}
+
+.likes {
+  display: flex;
+  justify-content: center;
+}

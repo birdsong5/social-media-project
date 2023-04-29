@@ -1,6 +1,7 @@
 .navbar {
-  background-color: pink;
   padding: 20px;
+  display: grid;
+  grid-template-columns: 2;
 }
 
 .nav-links {
