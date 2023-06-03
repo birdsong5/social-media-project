@@ -95,13 +95,13 @@ export const Post = (props: Props) => {
         <p>{post.description}</p>
       </div>
       <div>
-        <p>@ {post.userName}</p>
+        <p className="userName">@ {post.userName}</p>
       </div>
       <div className="likes">
         <button onClick={userLiked ? removeLike : addLike} className="like">
           {userLiked ? <>&#x1F497;</> : <>&#x1F90D;</>}
         </button>{" "}
-        <p>{likes && <p>Likes: {likes?.length}</p>}</p>
+        <p>{likes && <p className="likesdisplay"> {likes?.length}</p>}</p>
       </div>
     </div>
   );

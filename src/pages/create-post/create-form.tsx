@@ -5,6 +5,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import "./create-post.css";
 
 interface CreateFormData {
   title: string;
@@ -43,12 +44,14 @@ export const CreateForm = () => {
   };
 
   return (
-    <form action="" onSubmit={handleSubmit(onCreatePost)}>
-      <input type="text" placeholder="Title..." {...register("title")} />
-      <p style={{ color: "red" }}>{errors.title?.message}</p>
-      <textarea placeholder="Description..." {...register("description")} />
-      <p style={{ color: "red" }}>{errors.description?.message}</p>
-      <input type="submit" value="Submit" />
-    </form>
+    <div className="create-post">
+      <form action="" onSubmit={handleSubmit(onCreatePost)}>
+        <input type="text" placeholder="Title..." {...register("title")} />
+        <p style={{ color: "red" }}>{errors.title?.message}</p>
+        <textarea placeholder="Description..." {...register("description")} />
+        <p style={{ color: "red" }}>{errors.description?.message}</p>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
   );
 };

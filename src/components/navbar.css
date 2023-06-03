@@ -1,19 +1,28 @@
 .navbar {
   padding: 20px;
   display: grid;
-  grid-template-columns: 2;
+  grid-template-rows: 150px 300px;
 }
 
 .nav-links {
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-rows: 3;
 }
 
 .nav-links div {
-  align-items: end;
   margin: 10px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.nav-links a {
+  color: rgb(62, 8, 112);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
 img {
@@ -21,15 +30,15 @@ img {
 }
 
 .user-pic {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-rows: 3;
   align-items: center;
 }
 
 .user-pic p,
 img,
 button {
-  margin: 10px;
+  margin: 10px auto;
 }
 
 .user-pic p {

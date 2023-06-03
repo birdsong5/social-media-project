@@ -2,14 +2,30 @@ button.like {
   font-size: 25px;
   background-color: white;
   border: none;
-  margin: 5px;
+  margin: 0px 5px;
 }
 
 button.like:hover {
   font-size: 28px;
 }
 
-.likes {
+p {
+  font-size: 20px;
+}
+
+p.userName {
+  font-size: 17px;
+  font-style: italic;
+}
+
+div .likes {
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: end;
+}
+
+p .likesdisplay {
+  margin: 0;
+  font-size: 15px;
 }
