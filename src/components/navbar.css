@@ -2,6 +2,8 @@
   padding: 20px;
   display: grid;
   grid-template-rows: 150px 300px;
+  background-color: rgb(246, 242, 252);
+  border-radius: 10px;
 }
 
 .nav-links {

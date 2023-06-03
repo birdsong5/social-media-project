@@ -2,6 +2,7 @@ import { getDocs, collection } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../config/firebase";
 import { Post } from "./post";
+import "./post.css";
 
 export interface Post {
   id: string;
@@ -28,7 +29,7 @@ export const Main = () => {
   }, []);
 
   return (
-    <div>
+    <div className="postspace">
       {postList?.map((post) => (
         <Post post={post} />
       ))}

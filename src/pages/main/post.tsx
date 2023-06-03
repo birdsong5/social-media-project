@@ -87,7 +87,7 @@ export const Post = (props: Props) => {
   }, []);
 
   return (
-    <div>
+    <div className="postrow">
       <div>
         <h1>{post.title}</h1>
       </div>
