@@ -43,6 +43,17 @@ button {
 
 .user-pic p {
   font-size: 20px;
+  color: rgb(32, 2, 59);
   font-weight: 600;
-  opacity: 60%;
+  opacity: 70%;
+}
+
+.user-pic button.logout {
+  background-color: rgb(224, 209, 236);
+  color: black;
+  font-size: 15px;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }

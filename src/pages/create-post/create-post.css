@@ -38,3 +38,13 @@ input[type="text"] {
 input[type="text"]:focus {
   border: 2px solid #555;
 }
+
+input[type="submit"] {
+  background-color: rgb(224, 209, 236);
+  color: black;
+  font-size: 18px;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}

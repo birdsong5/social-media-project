@@ -9,8 +9,9 @@ button.like:hover {
   font-size: 28px;
 }
 
-p {
-  font-size: 20px;
+p.post {
+  font-size: 19px;
+  line-height: 1.2;
 }
 
 p.userName {

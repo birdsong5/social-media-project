@@ -37,7 +37,9 @@ export const Navbar = () => {
             alt=""
             referrerPolicy="no-referrer"
           />
-          <button onClick={signUserOut}>Log Out</button>
+          <button className="logout" onClick={signUserOut}>
+            Log Out
+          </button>
         </div>
       )}
     </div>

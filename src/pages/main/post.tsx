@@ -92,7 +92,7 @@ export const Post = (props: Props) => {
         <h1>{post.title}</h1>
       </div>
       <div>
-        <p>{post.description}</p>
+        <p className="post">{post.description}</p>
       </div>
       <div>
         <p className="userName">@ {post.userName}</p>
