@@ -15,16 +15,16 @@ export interface Post {
 export const Main = () => {
   const [postList, setPostList] = useState<Post[] | null>(null);
 
-  const postsRef = collection(db, "posts");
-
-  const getPosts = async () => {
-    const data = await getDocs(postsRef);
-    setPostList(
-      data.docs.map((doc) => ({ ...doc.data(), id: doc.id })) as Post[]
-    );
-  };
-
   useEffect(() => {
+    const postsRef = collection(db, "posts");
+
+    const getPosts = async () => {
+      const data = await getDocs(postsRef);
+      setPostList(
+        data.docs.map((doc) => ({ ...doc.data(), id: doc.id })) as Post[]
+      );
+    };
+
     getPosts();
   }, []);
 
