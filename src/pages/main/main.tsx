@@ -26,7 +26,7 @@ export const Main = () => {
     };
 
     getPosts();
-  }, []);
+  }, [postList]);
 
   return (
     <div className="postspace">
