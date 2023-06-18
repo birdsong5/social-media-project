@@ -10,7 +10,7 @@ import {
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../../config/firebase";
-import { Post as IPost } from "./main";
+import { Post as IPost } from "./Post.1";
 import "./post.css";
 
 interface Props {
