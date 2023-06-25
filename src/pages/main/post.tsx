@@ -84,7 +84,7 @@ export const Post = (props: Props) => {
 
   useEffect(() => {
     getLikes();
-  }, []);
+  });
 
   return (
     <div className="postrow">
