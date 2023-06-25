@@ -4,7 +4,7 @@ import { db } from "../../config/firebase";
 import { Post } from "./post";
 import "./post.css";
 
-export interface Post {
+export interface PostInterface {
   id: string;
   userId: string;
   title: string;
@@ -13,7 +13,7 @@ export interface Post {
 }
 
 export const Main = () => {
-  const [postList, setPostList] = useState<Post[] | null>(null);
+  const [postList, setPostList] = useState<PostInterface[] | null>(null);
 
   useEffect(() => {
     const postsRef = collection(db, "posts");
@@ -21,7 +21,10 @@ export const Main = () => {
     const getPosts = async () => {
       const data = await getDocs(postsRef);
       setPostList(
-        data.docs.map((doc) => ({ ...doc.data(), id: doc.id })) as Post[]
+        data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        })) as PostInterface[]
       );
     };
 
